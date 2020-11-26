@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
 import Home from './pages/Home';
 import Admin from './pages/Admin';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 import { AuthContext } from './context/auth';
 function App(props) {
     return (
@@ -18,6 +20,8 @@ function App(props) {
                         </li>
                     </ul>
                     <Route exact path="/" component={Home} />
+                    <Route exact path="/login" component={Login} />
+                    <Route exact path="/signup" component={Signup} />
                     <PrivateRoute path="/admin" component={Admin} />
                 </div>
             </Router>
